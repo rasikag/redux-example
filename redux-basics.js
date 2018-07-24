@@ -31,6 +31,8 @@ const store = createStore(rootReducer);
 
 console.log(store.getState());
 
+
+// subscriber comes before the dispatcher
 store.subscribe(() => {
     console.log('[Subscription]', store.getState());
 });
