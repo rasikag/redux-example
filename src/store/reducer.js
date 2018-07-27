@@ -44,7 +44,7 @@ const reducer = (state = initialState, action) => {
             
             return {
                 ...state,
-                result : updateArray
+                results : updateArray
             }
             
             //const id =  2;
