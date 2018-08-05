@@ -8,49 +8,47 @@ export const DELETE_RESULT = 'DELETE_RESULT';
 export const increment = () => {
     return {
         type: INCREMENT
-    }
-}
+    };
+};
 
 export const decrement = () => {
     return {
         type: DECREMENT
-    }
-}
+    };
+};
 
-export const add = (value) => {
+export const add = ( value ) => {
     return {
         type: ADD,
         val: value
-    }
-}
+    };
+};
 
-export const subtract = (value) => {
+export const subtract = ( value ) => {
     return {
         type: SUBTRACT,
         val: value
-    }
-}
+    };
+};
 
 export const saveResult = ( res ) => {
     return {
         type: STORE_RESULT,
         result: res
-    }
+    };
 }
 
-export const storeResult = (res) => {
+export const storeResult = ( res ) => {
     return dispatch => {
-        setTimeout(()=> {
+        setTimeout( () => {
             dispatch(saveResult(res));
-        }, 2000);
+        }, 2000 );
     }
-    
-    
-}
+};
 
-export const deleteResult = (resElId) => {
+export const deleteResult = ( resElId ) => {
     return {
-        type: STORE_RESULT,
+        type: DELETE_RESULT,
         resultElId: resElId
-    }
-}
+    };
+};
